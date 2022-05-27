@@ -1,0 +1,117 @@
+{"intents":
+[
+    {"tags": "chaohoi", 
+    "patterns":["Chào","Xin chào", "Chào bạn"],
+    "response": ["Xin chào, tôi có thể giúp gì không", "Chào bạn, bạn cần gì?"],
+    "context_set": ""
+},
+    {"tags": "miccheck", 
+        "patterns":["Alo","123456789","alo alo","có ai ở đó không","Bạn ơi bạn đâu rồi","Có nghe tôi nói không","Nghe rõ trả lời","1","2","3","4","5","6","7","8","9"],
+        "response": ["Tôi vẫn đang nghe đây", "Alo alo, tôi vẫn nghe đây, bạn cần gì không?"],
+        "context_set": ""
+    },
+
+    {"tags": "luachon",
+    "patterns":["Bạn có thể làm gì", "Bạn thì làm được gì", "Giúp được gì chứ", "Danh sách việc bạn có thể làm","Xem lưạ chọn"],
+    "response":["Tôi có thể giúp bạn xem tình hình thời tiết, tìm kiếm các kiến thức mới, hoặc mở các bài hát bạn thích và một vài tiện ích khác"],
+    "context_set":""
+
+},
+    {"tags": "note",
+        "patterns":["Viết ghi chú cho tôi", "Lên lịch cho tôi", "Sắp xếp cho tôi","Viết note", "Note","Ghi nhớ", "Thêm việc cần làm ngày hôm nay","Ghi chú cho tôi","ghi chú","Lập kế hoạch"],
+        "response":["Bạn nói đi, tôi sẽ ghi nhớ giúp bạn","Bạn cần ghi chú việc gì"],
+        "context_set":""
+    },
+    {"tags": "tomorrownote",
+        "patterns":["Viết ghi chú cho ngày mai", "Lên lịch cho hôm sau", "thêm công việc ngày mai","Viết note ngày mai", "Note cho ngày mai", "Thêm việc cần làm ngày mai","Ghi chú cho ngày mai","ghi chú cho hôm sau","Lập kế hoạch ngày tiếp theo"],
+        "response":["Bạn nói đi, tôi sẽ ghi nhớ giúp bạn","Bạn cần ghi chú việc gì"],
+        "context_set":""
+    },
+    {"tags": "readnote",
+        "patterns":["Xem ghi chú của tôi", "Xem lịch làm việc của tôi", "Xem lịch của tôi ngày hôm nay","Xem ghi chú", "Xem note","Hôm nay có việc gì nhỉ", "Việc cần làm ngày hôm nay","Xem ghi chú của tôi","mở ghi chú","Xem kế hoạch","Đọc ghi chú hôm nay"],
+        "response":["Ghi chú của ngày hôm nay gồm:"],
+        "context_set":""
+    },
+    {"tags": "readtomorrownote",
+        "patterns":["Xem ghi chú ngày mai", "Xem lịch làm việc ngày mai", "ngày mai có việc gì", "Xem note ngày mai","Đọc note ngày mai", "Đọc ghi chú ngày mai","Xem ghi chú của tôi hôm sau","mở ghi chú ngày mai","kế hoạch ngày mai"],
+        "response":["Ghi chú của ngày mai "],
+        "context_set":""
+    },
+    {"tags": "tambiet", 
+    "patterns":["bái bai", "Bạn nghỉ đi", "Tạm biệt", "Hẹn gặp lại"],
+    "response": ["Vậy thôi tôi đi đây, bye bạn", "Bai bai bạn"],
+    "context_set": ""
+},
+{"tags": "tuoi", 
+    "patterns":["Em bao tuổi","tuổi", "Bao nhiêu tuổi", "Mấy tuổi", "Sống bao nhiêu năm rồi"],
+    "response": ["Tớ đã đủ tuổi rồi", "Mười tám tuổi","Hỏi tuối làm gì", "Mới 2 tuần tuổi"],
+    "context_set": ""
+},
+{"tags":"wiki",
+    "patterns": ["Wikipedia", "Mở wiki cho tôi", "Tôi muốn tìm hiểu", "Tôi muốn tìm kiếm thông tin", "Mở wikipedia cho tôi", "Xem wikipedia"],
+    "response": ["Bạn muốn tìm hiểu về chủ đề gì"],
+    "context_set": ""
+
+},
+{
+    "tags":"timkiem",
+    "patterns":[],
+    "response": ["Bạn muốn tìm ở Youtube hay Google"],
+    "context": ["timkiem"],
+    "context_set": ["youtubesearch","googlesearch"]
+},
+{
+    "tags":"youtubesearch",
+    "patterns":[],
+    "response": ["Bạn muốn tìm chủ đề gì ở Youtube"],
+    "context": ["youtubesearch"],
+    "context_link": ["gettopic"]
+},
+
+{
+    "tags":"googlesearch",
+    "patterns":["Tra Google", "Google", "Xem Google","Gu gồ","Mở google", "Cho tôi hỏi cái này","Hỏi cái","Hello google"],
+    "response": ["Bạn muốn tìm chủ đề gì ở Google"],
+    "context": ["googlesearch"],
+    "context_link": ["gettopic"]
+},
+{
+    "tags":"gettopic",
+    "patterns":[],
+    "response": ["Bạn đợi tôi một lát", "Để tôi xem đã", "Chờ chút nhé"],
+    "context_set": ""
+},
+{
+    "tags":"gettime",
+    "patterns":["Giờ là mấy giờ", "Ngày giờ", "Ngày bao nhiêu","Xem ngày giờ","Mấy giờ rồi","Ngày mấy tháng mấy","Hôm nay là ngày mấy","Bây giờ là "],
+    "response": ["Để tôi xem đã","Đợi chút"],
+    "context_set": ""
+},
+{"tags":"hat",
+    "patterns": ["Hát tôi nghe đi"],
+    "response": ["Tôi chưa được học hát bạn ơi"],
+    "context_set": ""
+
+},
+{"tags":"thoitiet",
+    "patterns": ["Tình hình thời tiết thế nào","Thời tiết", "Nắng mưa thế nào","Mưa hay nắng","Dự báo thời tiết","Xem thời tiết","Mở thời tiết"],
+    "response": ["Bạn muốn xem thời tiết ở đâu"],
+    "context_set": ""
+
+},
+{"tags":"chuyencuoi",
+    "patterns": ["Có gì vui kể tôi nghe đi", "Kể chuyện cười", "Kể truyện cười","Bạn giúp tôi vui lên được không", "Tôi muốn nghe truyện cười", "Xem truyện cười"],
+    "response": ["Hai người bạn đi dạo với nhau. Một anh bảo: Tối qua, tôi đến nhà hát xem kịch. Nhưng chỉ xem đến màn một rồi ra khỏi rạp. Tại sao? Tại vì, trên chương trình có nói: “Màn hai… 3 năm sau”. Anh xem thời gian dài như thế, tôi đợi làm gì"
+    ,"Một cậu bé vô tình làm đổ cái xe chở ngô. Người hàng xóm nghe thấy tiếng động liền bảo: “Này, Willis, không sao đâu. Sang đây ăn cơm với bác rồi lát nữa bác lật lại xe cho”. “Bác thật là tốt”, Willis trả lời. “Nhưng mà cháu sợ bố cháu không thích”."
+    ],
+    "context_set": ""
+
+},
+
+{"tags":"youtube",
+    "patterns": ["Mở Youtube cho tôi đi", "tôi muốn xem video", "Xem youtube", "Youtube", "Xem Video"],
+    "response": ["Bạn muốn xem gì"],
+    "context_set": ""
+}
+
+]}
