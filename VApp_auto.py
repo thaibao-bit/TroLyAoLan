@@ -94,7 +94,8 @@ class VApp:
         self.city = self.remove_accent(city)
         self.city = re.sub(" ","",self.city) 
         self.city = self.city.lower()
-        url = 'http://api.openweathermap.org/data/2.5/weather?q={},&units=imperial&appid=cea276b9e988098abf25190163dbc055'.format(self.city)
+        self.apikey = "Dang ky tai khoan openweather va them apikey vao day"
+        url = 'http://api.openweathermap.org/data/2.5/weather?q={city},&units=imperial&appid={apikey}'.format(city=self.city, apikey = self.apikey)
         try:
             r = requests.request("GET",url).json()
             temp = int((r['main']['temp'] - 32)* 5/9)
