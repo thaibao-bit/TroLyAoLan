@@ -1,7 +1,8 @@
 # TroLyAoLan
 Project trợ lý ảo tiếng Việt Lan
 Đây là một trợ lý ảo đc viết dưới ngôn ngữ lập trình python 
-Yêu cầu hệ điều hành Linux, để sử dụng trên hệ điều hành windows thì cần sửa code ở vài nơi mà bạn có thể tự tìm hiểu
+Yêu cầu hệ điều hành Linux, để sử dụng trên hệ điều hành windows thì cần sửa code ở vài nơi mà bạn có thể tự tìm hiểu.
+
 Trợ lý ảo hoàn toàn bằng giọng nói, không sử dụng text. Sử dụng thư viện SpeechToText và giọng đọc của google.
 
 Sau đây là giao diện vài chức năng cơ bản
